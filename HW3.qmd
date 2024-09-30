@@ -310,8 +310,10 @@ f
 #Part c:
 What are the top 5 most common area codes amongst all phone numbers?
 ```{r}
-emails
+area_codes<-as.data.frame(table(substr(us$phone1, 0, 3)))
+area_codes[order(area_codes$Freq,decreasing=TRUE)[1:5],]
 ```
+From the table above we can see that the 5 most common area codes are 973, 212, 215, 410, 201, respectively. 
 
 #Part d:
 Produce a histogram of the log of the apartment numbers for all addresses. (You may assume any number at the end of the an address is an apartment number.)
