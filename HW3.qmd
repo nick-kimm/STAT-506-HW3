@@ -304,8 +304,12 @@ From above we can see that proportion of emails that end in the domain ".com" is
 What proportion of email addresses have at least one non alphanumeric character in them? 
 (Excluding the required “@” and “.” found in every email address.)
 ```{r}
-f
+sub("\\@.*", "", us$email)
 ```
+```{r}
+sub(".*@", "", us$email)
+```
+
 
 #Part c:
 What are the top 5 most common area codes amongst all phone numbers?
