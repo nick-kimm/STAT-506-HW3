@@ -4,7 +4,7 @@ author: "Nick Kim"
 format: html
 ---
 
-Link to my [github](https://github.com/nick-kimm/STAT-506-HW3) repository. I lost my original version control project so if you want to see my commits up until my initial commit in the linked reposititory check out this link:  (https://github.com/nick-kimm/HW3)
+Link to my [github](https://github.com/nick-kimm/STAT-506-HW3) repository. I lost my original version control project so if you want to see my commits up until my initial commit in the linked reposititory check out this link:  [link](https://github.com/nick-kimm/HW3)
 
 ## Question 1
 
