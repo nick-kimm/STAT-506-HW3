@@ -325,7 +325,13 @@ From the table above we can see that the 5 most common area codes are 973, 212, 
 #Part d:
 Produce a histogram of the log of the apartment numbers for all addresses. (You may assume any number at the end of the an address is an apartment number.)
 ```{r}
+#Reducing the dataset to just addresses with #. Should be addresses associated with an apartment 
+ap<-us[grepl("#",us$address),4]
 
+#Now will reduce the address string to just the apartment number. Number after #
+ap_num<-sub(".*#","",ap)
+
+hist(log(as.numeric(ap_num)),main="Histogram of the Log of Apartment Numbers",xlab="Log of Apartment Numbers")
 ```
 
 #Part e:
