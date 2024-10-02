@@ -1,7 +1,9 @@
 ---
 title: "HW3"
 author: "Nick Kim"
-format: html
+format:
+  html:
+    embed-resources: true
 ---
 
 Link to my [github](https://github.com/nick-kimm/STAT-506-HW3) repository. I lost my original version control project so if you want to see my commits up until my initial commit in the linked reposititory check out this link:  [link](https://github.com/nick-kimm/HW3)
@@ -170,7 +172,7 @@ gg <- function(connection,query){
 ```
 
 #Part a:
-What is the oldest movie (earliest release year) in the database?
+What year is the oldest movie from, and how many movies were released in that year?
 ```{r}
 dbListTables(movies)
 dbListFields(movies,"film")
@@ -178,8 +180,10 @@ dbListFields(movies,"film")
 
 ```{r}
 gg(movies,"
-   SELECT title, MIN(release_year)
-   FROM film
+   SELECT release_year, COUNT(film_id) AS count
+    FROM film
+   GROUP BY release_year
+   ORDER BY release_year
    ")
 ```
 #Part b:
